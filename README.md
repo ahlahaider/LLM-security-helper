@@ -1,32 +1,49 @@
-# LLM Security Helper
+# 🛡️ LLM Security Helper
 
-A professional security auditing tool designed to identify vulnerabilities in source code and perform threat modeling for GenAI/Agentic application specifications. This tool maps findings to the **OWASP Top 10 for LLM Applications (2025)** and the **MITRE ATLAS** framework.
+A Streamlit application that analyzes code and application specifications for security vulnerabilities, mapping findings to OWASP Top 10 for LLM Applications and MITRE ATLAS frameworks.
 
-## 🛠 Features
+## What It Does
 
-### Part 1: Source Code Security Analysis
-* **Vulnerability Detection:** Identifies critical flaws such as SQL Injection, Command Injection, and Insecure Deserialization.
-* **Security Remediation:** Provides actionable, secure-by-default code snippets to fix identified risks.
-* **Technical Focus:** Concentrates specifically on security invariants rather than general code style.
+**Part 1: Code Security Analysis**  
+Input vulnerable code snippets → Get identified vulnerabilities and secure code fixes
 
-### Part 2: GenAI Architecture Threat Modeling
-* **Spec Analysis:** Evaluates system architectures, agent permissions, and data flow.
-* **Framework Mapping:** * **OWASP LLM Top 10:** Identifies risks like Excessive Agency (LLM06) and System Prompt Leakage (LLM07).
-    * **MITRE ATLAS:** Maps adversarial tactics such as LLM Prompt Injection (AML.T0051) and AI Service API exploitation (AML.T0096).
+**Part 2: Specification Vulnerability Assessment**  
+Input GenAI/Agentic app specs → Get vulnerability report mapped to OWASP LLM Top 10 and MITRE ATLAS
 
----
+## Installation
 
-##  Start Guide
+### 1. Clone & Install
 
-Follow these commands in your terminal to set up and run the application on macOS.
-
-### 1. Repository Setup
 ```bash
-# Clone the repository
-git clone
-[https://github.com/YOUR_USERNAME/llm-security-helper.git](https://github.com/YOUR_USERNAME/llm-security-helper.git)](https://github.com/ahlahaider/LLM-security-helper.git)
-cd llm-security-helper
+git clone <your-repo-url>
+cd <your-repo-directory>
+pip install -r requirements.txt
+```
 
-# Create and activate a virtual environment
-python3 -m venv venv
-source venv/bin/activate
+### 2. Set Up API Key
+
+Create a `.env` file in the project root:
+
+```
+OPENAI_API_KEY=your_google_gemini_api_key_here
+```
+
+Get your API key at [Google AI Studio](https://aistudio.google.com/app/apikey)
+
+## Usage
+
+```bash
+streamlit run app.py
+```
+
+Open `http://localhost:8501` and select your analysis type:
+- **Part 1:** Paste code → Get vulnerabilities + secure fixes
+- **Part 2:** Paste app specs → Get OWASP + MITRE mappings + mitigations
+
+## Requirements
+
+- Python 3.8+
+- streamlit
+- google-generativeai
+- python-dotenv
+- requests
