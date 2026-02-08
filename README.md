@@ -23,7 +23,8 @@ Follow these commands in your terminal to set up and run the application on macO
 ### 1. Repository Setup
 ```bash
 # Clone the repository
-git clone [https://github.com/YOUR_USERNAME/llm-security-helper.git](https://github.com/YOUR_USERNAME/llm-security-helper.git)
+git clone
+[https://github.com/YOUR_USERNAME/llm-security-helper.git](https://github.com/YOUR_USERNAME/llm-security-helper.git)](https://github.com/ahlahaider/LLM-security-helper.git)
 cd llm-security-helper
 
 # Create and activate a virtual environment
