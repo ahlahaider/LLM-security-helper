@@ -15,7 +15,7 @@ Input GenAI/Agentic app specs → Get vulnerability report mapped to OWASP LLM T
 ### 1. Clone & Install
 
 ```bash
-git clone <your-repo-url>
+git clone (https://github.com/ahlahaider/LLM-security-helper.git)
 cd <your-repo-directory>
 pip install -r requirements.txt
 ```
